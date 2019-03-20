@@ -13,6 +13,7 @@
 		CBDBE34D22400AF0008E0365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDBE34B22400AF0008E0365 /* LaunchScreen.storyboard */; };
 		CBDBE35522400C4A008E0365 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBE35422400C4A008E0365 /* ItemsViewController.swift */; };
 		CBDBE35722400EAB008E0365 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDBE35622400EAB008E0365 /* Item.swift */; };
+		CBEE9A2D22429E0B00067FB0 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEE9A2C22429E0B00067FB0 /* ItemStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		CBDBE34E22400AF0008E0365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDBE35422400C4A008E0365 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		CBDBE35622400EAB008E0365 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CBEE9A2C22429E0B00067FB0 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				CBDBE34222400AF0008E0365 /* AppDelegate.swift */,
 				CBDBE35422400C4A008E0365 /* ItemsViewController.swift */,
 				CBDBE35622400EAB008E0365 /* Item.swift */,
+				CBEE9A2C22429E0B00067FB0 /* ItemStore.swift */,
 				CBDBE34622400AF0008E0365 /* Main.storyboard */,
 				CBDBE34922400AF0008E0365 /* Assets.xcassets */,
 				CBDBE34B22400AF0008E0365 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			files = (
 				CBDBE35522400C4A008E0365 /* ItemsViewController.swift in Sources */,
 				CBDBE35722400EAB008E0365 /* Item.swift in Sources */,
+				CBEE9A2D22429E0B00067FB0 /* ItemStore.swift in Sources */,
 				CBDBE34322400AF0008E0365 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
