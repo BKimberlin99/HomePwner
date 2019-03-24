@@ -56,19 +56,19 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wWd-JG-1gF">
                                             <rect key="frame" x="16" y="11" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fpN-VK-YvB">
                                             <rect key="frame" x="16" y="40" width="31" height="15"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P42-fh-VUz">
                                             <rect key="frame" x="317" y="22" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,6 +78,7 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="P42-fh-VUz" secondAttribute="trailing" id="AaB-ty-wLS"/>
                                         <constraint firstAttribute="bottom" secondItem="fpN-VK-YvB" secondAttribute="bottom" constant="9.5" id="VuW-g5-FoX"/>
                                         <constraint firstItem="wWd-JG-1gF" firstAttribute="top" secondItem="uSZ-Xy-EjC" secondAttribute="topMargin" id="Yyb-Zw-OSn"/>
+                                        <constraint firstItem="fpN-VK-YvB" firstAttribute="top" secondItem="wWd-JG-1gF" secondAttribute="bottom" constant="8" id="gAJ-Zv-gt8"/>
                                         <constraint firstItem="fpN-VK-YvB" firstAttribute="leading" secondItem="wWd-JG-1gF" secondAttribute="leading" id="i17-dm-0oe"/>
                                         <constraint firstItem="wWd-JG-1gF" firstAttribute="leading" secondItem="uSZ-Xy-EjC" secondAttribute="leadingMargin" id="uIL-jQ-csZ"/>
                                     </constraints>
