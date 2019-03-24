@@ -75,8 +75,8 @@ class ItemsViewController: UITableViewController {
         if editingStyle == .delete {
             let item = itemStore.allItems[indexPath.row]
             
-            let title = "Delete \(item.name)?"
-            let message = "Are you sure you want to delete this item?"
+            let title = "Remove \(item.name)?"
+            let message = "Are you sure you want to remove this item?"
             
             let ac = UIAlertController(title: title,
                                        message: message,
@@ -85,7 +85,7 @@ class ItemsViewController: UITableViewController {
             let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             ac.addAction(cancelAction)
             
-            let deleteAction = UIAlertAction(title: "Delete", style: .destructive,
+            let deleteAction = UIAlertAction(title: "Remove", style: .destructive,
                                              handler: { (action) -> Void in
                                     
                 // Remove the item from the store
@@ -99,6 +99,12 @@ class ItemsViewController: UITableViewController {
             // Present the alert controller
             present(ac, animated: true, completion: nil)
         }
+    }
+    
+    //Bronze Challenge: Rename delete button to Remove
+    override func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
+        
+        return "Remove"
     }
     
     override func tableView(_ tableView: UITableView,
