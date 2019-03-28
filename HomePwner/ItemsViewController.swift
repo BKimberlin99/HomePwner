@@ -85,6 +85,18 @@ class ItemsViewController: UITableViewController {
         }
     }
     
+    //Gold Challenge: Really preventing reordering, keeps track of item's original row and checks to see
+    // if it passes the row that "No more items!" is in and if it does, returns it to it's original row
+    // otherwise, moves it to the proposed row
+    override func tableView(_ tableView: UITableView, targetIndexPathForMoveFromRowAt sourceIndexPath:
+        IndexPath, toProposedIndexPath proposedDestinationIndexPath: IndexPath) -> IndexPath {
+        
+        if (proposedDestinationIndexPath.row >= itemStore.allItems.count){
+            return sourceIndexPath
+        }
+        return proposedDestinationIndexPath
+    }
+    
     //Make sure that the "No more items!" cell can't be edited
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         if (indexPath.row >= itemStore.allItems.count){
