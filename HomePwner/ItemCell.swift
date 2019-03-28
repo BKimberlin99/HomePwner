@@ -23,4 +23,15 @@ class ItemCell: UITableViewCell {
     }
 }
 
+//Create custom cell to have "No more items!" centered and gray
+class customItemCell: UITableViewCell {
+    @IBOutlet var noItemsLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        noItemsLabel.adjustsFontForContentSizeCategory = true
+    }
+}
+
 

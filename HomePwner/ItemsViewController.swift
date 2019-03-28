@@ -46,34 +46,49 @@ class ItemsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        return itemStore.allItems.count + 1 //Changed to +1 for silver challenge
     }
     
     override func tableView(_ tableView: UITableView,
                             cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Get a new or recycled cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell",
+        if indexPath.row < itemStore.allItems.count {
+            //Get a new or recycled cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell",
                                                  for: indexPath) as! ItemCell
         
-        //Set the text on the cell with the description of the item
-        //that is at the nth index of items, where n = row this cell
-        //will appear in on the tableview
-        let item = itemStore.allItems[indexPath.row]
+            //Set the text on the cell with the description of the item
+            //that is at the nth index of items, where n = row this cell
+            //will appear in on the tableview
+            let item = itemStore.allItems[indexPath.row]
         
-        //Configure the cell with the Item
-        cell.nameLabel.text = item.name
-        cell.serialNumberLabel.text = item.serialNumber
-        cell.valueLabel.text = "$\(item.valueInDollars)"
+            //Configure the cell with the Item
+            cell.nameLabel.text = item.name
+            cell.serialNumberLabel.text = item.serialNumber
+            cell.valueLabel.text = "$\(item.valueInDollars)"
         
         //Bronze Challenge Cell Colors: Change valueLabel to be red if valueInDollars is >= 50 but change it
         // to green if it is less than 50.
-        if item.valueInDollars >= 50 {
-            cell.valueLabel.textColor = UIColor.red
-        } else {
-            cell.valueLabel.textColor = UIColor.green
-        }
+            if item.valueInDollars >= 50 {
+                cell.valueLabel.textColor = UIColor.red
+            } else {
+                cell.valueLabel.textColor = UIColor.green
+            }
         
-        return cell
+            return cell
+        //Create "No more items!" cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! customItemCell
+            cell.noItemsLabel.text = "No more items!"
+            return cell
+        }
+    }
+    
+    //Make sure that the "No more items!" cell can't be edited
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if (indexPath.row >= itemStore.allItems.count){
+            return false
+        }
+        return true
     }
     
     override func tableView(_ tableView: UITableView,
