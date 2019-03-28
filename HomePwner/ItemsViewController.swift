@@ -74,11 +74,13 @@ class ItemsViewController: UITableViewController {
                 cell.valueLabel.textColor = UIColor.green
             }
         
+            cell.backgroundColor = UIColor.clear //Set cell background to clear so table background is visible
             return cell
         //Create "No more items!" cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomCell") as! customItemCell
             cell.noItemsLabel.text = "No more items!"
+            cell.backgroundColor = UIColor.clear //Set cell background to clear so table background is visible
             return cell
         }
     }
@@ -149,5 +151,10 @@ class ItemsViewController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 65
+        
+        //Gold Challenge: Set custom background picture for table
+        let imageView = UIImageView(image: UIImage(named: "Zelda"))
+        imageView.contentMode = .scaleAspectFit
+        tableView.backgroundView = imageView
     }
 }
