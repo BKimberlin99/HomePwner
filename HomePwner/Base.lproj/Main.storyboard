@@ -88,7 +88,7 @@
                                     <outlet property="nameLabel" destination="wWd-JG-1gF" id="9PQ-Sq-1Dj"/>
                                     <outlet property="serialNumberLabel" destination="fpN-VK-YvB" id="pNl-Rq-BUQ"/>
                                     <outlet property="valueLabel" destination="P42-fh-VUz" id="Zqk-Rl-M54"/>
-                                    <segue destination="sEP-ya-2kV" kind="show" id="BVs-20-bva"/>
+                                    <segue destination="sEP-ya-2kV" kind="show" identifier="showItem" id="BVs-20-bva"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomCell" id="OcM-Hx-vjr" customClass="customItemCell" customModule="HomePwner" customModuleProvider="target">
