@@ -175,11 +175,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Q9-hU-KZA">
-                                        <rect key="frame" x="0.0" y="114" width="311" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="311" height="435"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLj-IM-djS">
+                                        <rect key="frame" x="0.0" y="557" width="311" height="30"/>
+                                        <state key="normal" title="Change Date"/>
+                                        <connections>
+                                            <segue destination="diH-ms-zDy" kind="show" identifier="changeDate" id="7dV-qg-beC"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="kNk-Zo-s4F" firstAttribute="leading" secondItem="NmM-pr-e8J" secondAttribute="leading" id="BkE-do-Xea"/>
@@ -215,6 +222,21 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1856.8" y="134.48275862068968"/>
+        </scene>
+        <!--Date Created View Controller-->
+        <scene sceneID="6SO-p8-u1Q">
+            <objects>
+                <viewController id="diH-ms-zDy" customClass="DateCreatedViewController" customModule="HomePwner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dk4-TD-l9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ro7-dH-m3t"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0uf-5i-1gX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2666" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GI3-cT-5ux">

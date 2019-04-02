@@ -70,4 +70,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate {
             item.valueInDollars = 0
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "changeDate"?:
+            let dateCreatedViewController = segue.destination as! DateCreatedViewController
+            dateCreatedViewController.item = item
+        default:
+            preconditionFailure("Unexpected segue identifier.")
+        }
+    }
 }
