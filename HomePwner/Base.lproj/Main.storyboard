@@ -212,7 +212,7 @@
                     <connections>
                         <outlet property="dateLabel" destination="6Q9-hU-KZA" id="Hka-Tf-3p8"/>
                         <outlet property="nameField" destination="kNk-Zo-s4F" id="ykq-cJ-pfm"/>
-                        <outlet property="serialField" destination="NmM-pr-e8J" id="hKq-pG-spz"/>
+                        <outlet property="serialNumberField" destination="NmM-pr-e8J" id="YMJ-3a-1mc"/>
                         <outlet property="valueField" destination="jIo-Me-Sfu" id="KWb-gc-Irb"/>
                     </connections>
                 </viewController>
