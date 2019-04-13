@@ -23,6 +23,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
     }
     var imageStore: ImageStore!
     
+    //Ch. 15 Silver Challenge, add button to remove a picture
+    @IBAction func removePicture(_ sender: UIBarButtonItem) {
+        imageStore.deleteImage(forKey: item.itemKey)
+        imageView.image = nil
+    }
+    
+    //Updated for Ch. 15 Gold Challenge: Camera Overlay
     @IBAction func takePicture(_ sender: UIBarButtonItem) {
         
         let imagePicker = UIImagePickerController()
@@ -31,6 +38,25 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         // just pick from photo library
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePicker.sourceType = .camera
+            
+            //Set up variable for the overlayView
+            let overlayView = UIView(frame: imagePicker.cameraOverlayView!.frame)
+            
+            //Set up crosshair as a label with a + in it and put it in the center
+            let crosshairLabel = UILabel()
+            crosshairLabel.text = "+"
+            crosshairLabel.font = UIFont.systemFont(ofSize: 50)
+            crosshairLabel.translatesAutoresizingMaskIntoConstraints = false
+            overlayView.addSubview(crosshairLabel)
+            
+            crosshairLabel.centerXAnchor.constraint(equalTo: overlayView.centerXAnchor).isActive = true
+            crosshairLabel.centerYAnchor.constraint(equalTo: overlayView.centerYAnchor).isActive = true
+            
+            //Avoid blocking default controls
+            overlayView.isUserInteractionEnabled = false
+            
+            imagePicker.cameraOverlayView = overlayView
+            
         } else {
             imagePicker.sourceType = .photoLibrary
         }
